@@ -16,7 +16,7 @@ const (
 
 func part1(reader *bufio.Reader) int {
 	res := 0
-	for i := 1; true; i++ {
+	for {
 		line, err := reader.ReadString('\n')
 		if err != nil {
 			if err != io.EOF {
