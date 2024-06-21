@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"slices"
 	"strconv"
 	"strings"
@@ -40,7 +39,6 @@ func part1(scanner *bufio.Scanner) int {
 			input = fn(input)
 		}
 
-		fmt.Println("Seed:", seed, "- Location:", input)
 		if input < res {
 			res = input
 		}
@@ -113,6 +111,7 @@ func parseMap(scanner *bufio.Scanner) [][]int {
 		if err != nil {
 			break
 		}
+
 		count, err := strconv.Atoi(nums[2])
 		if err != nil {
 			break

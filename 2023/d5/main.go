@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -33,7 +34,7 @@ func main() {
 
 	fmt.Println("Part 1:", part1(scanner))
 
-	// file.Seek(0, io.SeekStart)
-	// scanner = bufio.NewScanner(file)
-	// fmt.Println("Part 2:", part2(scanner))
+	file.Seek(0, io.SeekStart)
+	scanner = bufio.NewScanner(file)
+	fmt.Println("Part 2:", part2(scanner))
 }
